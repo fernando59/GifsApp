@@ -1,0 +1,31 @@
+<mat-drawer-container  >
+    <!-- Sidebar -->
+    <mat-drawer #drawer class="example-sidenav" mode="side" color="primary">
+        <h2>Gifs App</h2>
+        <hr>
+
+        <mat-list>
+            <mat-list-item *ngFor="let item of history" (click)="search(item)"> {{item | titlecase}} </mat-list-item>
+        </mat-list>
+
+    </mat-drawer>
+
+
+
+    <mat-drawer-content>
+        <!-- Navbar -->
+        <mat-toolbar color="primary">
+            <div class="example-sidenav-content">
+                <button type="button" mat-button (click)="drawer.toggle()">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">reorder </mat-icon>
+                </button>
+            </div>
+        </mat-toolbar>
+
+        <!-- Content -->
+        <div class="container">
+            <app-search></app-search>
+            <app-list-gifs></app-list-gifs>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>

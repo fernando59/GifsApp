@@ -1,0 +1,26 @@
+.container{
+    padding: 20px;
+}
+h2{
+    text-align: center;
+    padding-top: 15px;
+}
+
+mat-drawer-container{
+    height: 100vh;
+}
+mat-drawer{
+    height: 100%;
+    width: 250px;
+}
+mat-list-item{
+    cursor: pointer;
+}
+mat-list-item:hover{
+    background: rgba(0,0,0,0.1);
+}
+@media only screen and (max-width:600px){
+   mat-drawer{
+       width: 150px;
+   } 
+}

@@ -1,0 +1,7 @@
+<h2>List of Gifs</h2>
+<div class="grid">
+
+    <div *ngFor="let item of results" class="animate__animated  animate__fadeIn ">
+        <img [src]="item.images.downsized_medium.url" [alt]="item.title">
+    </div>
+</div>
